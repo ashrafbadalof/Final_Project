@@ -1,0 +1,44 @@
+﻿@using LoginApplication.ViewModels
+@model CourseViewModel
+<div class="row"
+              <div class="col-md-6 d-flex align-items-stretch grid-margin">
+                <div class="row flex-grow">
+                  <div class="col-12">
+                    <div class="card">
+                      <div class="card-body">
+                        <h4 class="card-title">Create Course</h4>
+                        <form class="forms-sample" method="post" enctype="multipart/form-data"> isleyecek
+                          <div class="form-group">
+                            <label asp-for="Name">Name</label>
+                            <input asp-for="Name" class="form-control" id="exampleInputEmail1" placeholder="Name">
+                            <span asp-validation-for="Name" class="text-danger" ></span> 
+                          </div>
+
+                          <div class="form-group">
+                            <label asp-for="Price">Price</label>
+                            <input asp-for="Price" class="form-control" id="exampleprice1" placeholder="Price">
+                            <span asp-validation-for="Price" class="text-danger" ></span>
+                          </div>
+
+                          <div class="form-group">
+                            <label asp-for="Description">Description</label>
+                            <input asp-for="Description" class="form-control" id="exampleInputPassword1" placeholder="Description">
+                            <span asp-validation-for="Description" class="text-danger" ></span>
+                          </div>
+
+                           <div class="form-group">
+                            <label for="Image">Image</label>
+                            <input type="file" asp-for="Image" class="form-control" id="exampleInputPassword1" placeholder="Image" accept="image/*">
+                            <span asp-validation-for="Image" class="text-danger" ></span>
+                          </div>
+                          
+                          <button type="submit" class="btn btn-success mr-2">Submit</button>
+                          <button class="btn btn-light" asp-controller="course" asp-action="index">Cancel</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+</div>
+
